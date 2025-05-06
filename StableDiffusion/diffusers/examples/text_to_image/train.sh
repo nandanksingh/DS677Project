@@ -1,6 +1,6 @@
  
-export MODEL_NAME="CompVis/stable-diffusion-v1-4"
-export TRAIN_DIR="/project/sz457/ms3537/DS677/diffusers/examples/text_to_image/flickr30k_train"
+export MODEL_NAME="CompVis/stable-diffusion-v1-4" #pre-trained model
+export TRAIN_DIR="/project/sz457/ms3537/DS677/diffusers/examples/text_to_image/flickr30k_train" #path to our dataset
 
 accelerate launch --mixed_precision="fp16" train_text_to_image.py \
   --pretrained_model_name_or_path=$MODEL_NAME \
